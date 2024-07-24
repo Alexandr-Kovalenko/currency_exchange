@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EUR/USD</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="body">
+      <h1 class="title">Калькулятор обміну EUR/USD по крос-курсу</h1>
+      <p class="text">Введіть актуальний курс валют пари EUR/USD</p>
+      <div class="currency">
+        <div class="currency-item">
+          <p class="text-currency">EUR/USD</p>
+        </div>
+        <div class="currency-item">
+          <label class="labels" for="buy">Купівля</label>
+          <input class="inputs" id="buy" type="number" name="buy" />
+        </div>
+        <div class="currency-item">
+          <label class="labels" for="sell">Продаж</label>
+          <input class="inputs" id="sell" type="number" name="sell" />
+        </div>
+      </div>
+      <p class="text">Введіть суму та оберіть валюту яку необхідно отримати</p>
+      <div class="currency">
+        <div class="currency-item">
+          <label class="labels" for="summ">Сума</label>
+          <input class="inputs" id="summ" type="number" name="summ" />
+        </div>
+        <div class="currency-item">
+          <label class="labels" for="currency">Валюта</label>
+          <input
+            class="inputs"
+            id="currency"
+            list="currencyList"
+            name="currency"
+          />
+          <datalist id="currencyList">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </datalist>
+        </div>
+      </div>
+      <div>
+        <button class="button" id="calculate" type="button">Розрахувати</button>
+      </div>
+      <div class="result" id="result"></div>
+    </section>
+
+    <script src="./js/calculate.js"></script>
+  </body>
+</html>
